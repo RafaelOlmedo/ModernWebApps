@@ -1,2 +1,2 @@
 # ModernWebApps
-Curso ModernWebApps André Baltieri
+Curso ModernWebApps André Baltieri (Vídeo 6 - 30 minutos)

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Domain", "ModernStore.Domain\ModernStore.Domain.csproj", "{FE5BBE89-049C-46D0-B35A-CD70AB678F8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernStore.Console", "ModernStore.Console\ModernStore.Console.csproj", "{97434BEB-43C6-4B17-8141-5648CED6AA0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE5BBE89-049C-46D0-B35A-CD70AB678F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE5BBE89-049C-46D0-B35A-CD70AB678F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE5BBE89-049C-46D0-B35A-CD70AB678F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE5BBE89-049C-46D0-B35A-CD70AB678F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97434BEB-43C6-4B17-8141-5648CED6AA0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97434BEB-43C6-4B17-8141-5648CED6AA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97434BEB-43C6-4B17-8141-5648CED6AA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97434BEB-43C6-4B17-8141-5648CED6AA0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E9AF331-A15F-4197-8B32-81B19DBD4536}
+	EndGlobalSection
+EndGlobal
