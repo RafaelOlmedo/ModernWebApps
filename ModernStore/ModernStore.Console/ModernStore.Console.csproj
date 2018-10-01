@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentValidator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidator.1.0.5\lib\net461\FluentValidator.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,11 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ModernStore.Domain\ModernStore.Domain.csproj">
       <Project>{fe5bbe89-049c-46d0-b35a-cd70ab678f8d}</Project>
       <Name>ModernStore.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModersStore.Shared\ModersStore.Shared.csproj">
+      <Project>{2e47aafe-aea4-4f03-8a23-16ca8fb0c8d7}</Project>
+      <Name>ModersStore.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,14 +7,25 @@ namespace ModernStore.Console
 	{
 		static void Main(string[] args)
 		{
-			var customer = new Customer("Rafael", 
+			var user = new User("rafaelolmedo", "rafaelolmedo");
+
+			var customer = new Customer("a", 
 				"Olmedo", 
 				new DateTime(1992, 09, 14), 
-				"rafaelolmedo", 
-				"rafaelolmedo", 
-				"rafael.olmedo@hotmail.com");
+				"rafael.olmedohotmail.com",
+				user);
 
-			System.Console.WriteLine($"{customer.FirstName} {customer.LastName}");
+			customer.User.Activate();
+
+			if(!customer.IsValid())
+			{
+				foreach (var notification in customer.Notifications)
+				{
+					System.Console.WriteLine(notification.Message);
+				}
+			}
+
+			//System.Console.WriteLine(customer.ToString());
 			System.Console.ReadKey();
 		}
 	}

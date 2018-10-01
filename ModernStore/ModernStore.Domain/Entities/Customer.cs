@@ -1,35 +1,42 @@
-﻿using System;
+﻿using FluentValidator;
+using ModersStore.Shared.Entities;
+using System;
 
 namespace ModernStore.Domain.Entities
 {
-	public class Customer
+	public class Customer : Entity
 	{
-		public Customer(string firstName, string lastName, DateTime birthDate, string userName, string password, string email)
-		{
-			Id = Guid.NewGuid();
+		public Customer(string firstName, string lastName, DateTime birthDate, string email, User user)
+		{			
 			FirstName = firstName;
 			LastName = lastName;
-			Active = false;
 			BirthDate = birthDate;
-			UserName = userName;
-			Password = password;
 			Email = email;
+			User = user;
+
+			new ValidationContract<Customer>(this)
+				.IsRequired(x => x.FirstName, "Nome é obrigatório")
+				.HasMaxLenght(x => x.FirstName, 60)
+				.HasMinLenght(x => x.FirstName, 3)
+			    .IsRequired(x => x.LastName, "Sobrenome é obrigatório")
+				.HasMaxLenght(x => x.LastName, 60)
+				.HasMinLenght(x => x.LastName, 3)
+				.IsEmail(x => x.Email, "Valor informado não é de e-mail");
 		}
 
-		public Guid Id { get; set; }
+		public string FirstName { get; private set; }
 
-		public string FirstName { get; set; }
+		public string LastName { get; private set; }
 
-		public string LastName { get; set; }
+		public DateTime BirthDate { get; private set; }
 
-		public DateTime BirthDate { get; set; }
+		public string Email { get; private set; }
 
-		public bool Active { get; set; }
+		public User User { get; private set; }
 
-		public string UserName { get; set; }
-
-		public string Password { get; set; }
-
-		public string Email { get; set; }
+		public override string ToString()
+		{
+			return $"{FirstName} {LastName}";
+		}
 	}
 }
