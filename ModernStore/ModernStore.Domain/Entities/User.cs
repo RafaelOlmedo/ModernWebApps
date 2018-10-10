@@ -14,7 +14,7 @@ namespace ModernStore.Domain.Entities
 			Id = Guid.NewGuid();
 			UserName = username;
 			Password = password;
-			Active = false;
+			Active = true;
 		}
 
 		public Guid Id { get; private set; }

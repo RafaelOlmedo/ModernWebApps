@@ -10,8 +10,7 @@ namespace ModernStore.Console
 			var user = new User("rafaelolmedo", "rafaelolmedo");
 
 			var customer = new Customer("a", 
-				"Olmedo", 
-				new DateTime(1992, 09, 14), 
+				"Olmedo", 				
 				"rafael.olmedohotmail.com",
 				user);
 
