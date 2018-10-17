@@ -26,9 +26,7 @@ namespace ModernStore.Domain.Entities
 
 		public int QuantityOnHand { get; private set; }
 
-		public void DecreaseQuantity(int quantity)
-		{
-
-		}
+		public void DecreaseQuantity(int quantity) => QuantityOnHand -= quantity;
+		
 	}
 }

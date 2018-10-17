@@ -15,6 +15,8 @@ namespace ModernStore.Domain.Entities
 				.IsGreaterThan(x => x.Quantity, 1)
 				.IsGreaterThan(x => x.Product.QuantityOnHand, Quantity + 1, $"Não temos tantos {product.Title} em estoque.");
 
+			Product.DecreaseQuantity(Quantity);
+
 			
 
 

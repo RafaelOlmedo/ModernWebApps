@@ -49,6 +49,8 @@ namespace ModernStore.Domain.Entities
 
 		public void AddItem(OrderItem item)
 		{
+			AddNotifications(item.Notifications);
+
 			if (item.IsValid())
 				_items.Add(item);
 
